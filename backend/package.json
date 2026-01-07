@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend API for portfolio website",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "dev:bg": "rm -f server.log server.pid && (node src/index.js > server.log 2>&1 & echo $! > server.pid) && echo Started backend in background PID $(cat server.pid)",
+    "stop:bg": "if [ -f server.pid ]; then kill $(cat server.pid) 2>/dev/null || true; rm -f server.pid; echo Stopped backend background process; else echo No server.pid found; fi"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "zod": "^3.22.4",
+    "dotenv": "^16.3.1",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {}
+}

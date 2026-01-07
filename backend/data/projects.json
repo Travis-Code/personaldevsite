@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Platform",
+    "description": "A full-stack e-commerce platform with product catalog, shopping cart, and payment integration.",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+    "link": "https://example-ecommerce.com",
+    "github": "https://github.com/yourprofile/ecommerce"
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "description": "Collaborative task management application with real-time updates and team features.",
+    "technologies": ["React", "Express", "PostgreSQL", "Socket.io"],
+    "link": "https://example-tasks.com",
+    "github": "https://github.com/yourprofile/task-manager"
+  },
+  {
+    "id": 3,
+    "title": "Weather Dashboard",
+    "description": "Beautiful weather application with real-time data, forecasts, and location-based features.",
+    "technologies": ["React", "Tailwind CSS", "Weather API"],
+    "link": "https://example-weather.com",
+    "github": "https://github.com/yourprofile/weather-app"
+  }
+]
