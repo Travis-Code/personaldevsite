@@ -27,6 +27,8 @@ personaldevsite/
 
 ## Quick Start
 
+See also: [QUICKSTART.md](./QUICKSTART.md) and [DEPLOYMENT.md](./DEPLOYMENT.md) for a detailed, step-by-step guide.
+
 ### Prerequisites
 - Node.js 16+ 
 - npm or yarn
@@ -41,7 +43,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Backend runs on `http://localhost:5000`
+Backend runs on `http://localhost:5050`
 
 ### 2. Frontend Setup
 
@@ -135,15 +137,12 @@ Edit `frontend/src/components/Footer.jsx`
 ## Deployment
 
 ### Frontend (GitHub Pages)
-1. Build: `npm run build`
-2. Deploy `dist/` folder to GitHub Pages
-3. Update backend URL in frontend config
+GitHub Actions workflow builds and deploys automatically. Ensure repo variable `VITE_API_BASE` points to your backend URL with `/api`.
 
-### Backend (Railway, Heroku, or similar)
-1. Push code to GitHub
-2. Connect repository to Railway/Heroku
-3. Set environment variables
-4. Deploy
+### Backend (Railway)
+- Create service from this repo, root directory `backend`, start command `npm start`.
+- Set envs: `NODE_ENV=production`, `FRONTEND_URL=https://<user>.github.io/personaldevsite`, and `EMAIL_*` as needed.
+- Railway sets `PORT` automatically; the app reads it.
 
 ## Technologies
 
@@ -168,11 +167,13 @@ Edit `frontend/src/components/Footer.jsx`
 In separate terminals:
 
 ```bash
-# Terminal 1 - Backend
-cd backend && npm run dev
+# Terminal 1 - Backend (5050)
+cd backend
+npm run dev  # or: npm run dev:bg; tail -f server.log
 
-# Terminal 2 - Frontend
-cd frontend && npm run dev
+# Terminal 2 - Frontend (5173)
+cd ../frontend
+npm run dev  # or: npm run dev:bg; tail -f vite.log
 ```
 
 ### Environment Variables
