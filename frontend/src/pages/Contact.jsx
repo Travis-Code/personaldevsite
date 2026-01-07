@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
+import { apiFetch } from '../lib/api'
 
 // Validation schema
 const contactSchema = z.object({
@@ -26,7 +27,7 @@ export default function Contact() {
   const onSubmit = async (data) => {
     setIsSubmitting(true)
     try {
-      const response = await fetch('/api/contact', {
+      const response = await apiFetch('/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

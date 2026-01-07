@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { apiFetch } from '../lib/api'
 import ProjectCard from '../components/ProjectCard'
 
 export default function Projects() {
@@ -10,7 +11,7 @@ export default function Projects() {
     // Fetch projects from backend API
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/api/projects')
+        const response = await apiFetch('/projects')
         if (!response.ok) throw new Error('Failed to fetch projects')
         const data = await response.json()
         setProjects(data)
