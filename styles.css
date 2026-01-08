@@ -374,6 +374,31 @@ body {
     color: var(--text-light);
 }
 
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-light);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.project-link svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
