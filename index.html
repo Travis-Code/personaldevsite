@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Travis Hipolito</div>
-            <ul class="nav-menu">
+            <a href="#" class="nav-brand">Travis Hipolito</a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -27,6 +28,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -47,7 +49,7 @@
                 <div class="about-text">
                     <p>
                         Full-Stack Developer and Business Analyst with experience in system design, process optimization, and regulatory compliance. 
-                        Lead developer on Hawai'i's Public Assistance Information System (PAIS) and Electronic Document Management System (EDM).
+                        Technical contributor supporting Hawai'i's Public Assistance Information System (PAIS) and Electronic Document Management System (EDM).
                     </p>
                     <p>
                         I excel at translating complex business requirements into scalable technical solutions. My experience spans full-stack development, 
@@ -126,11 +128,11 @@
                         <h3>Software Developer / Business Analyst</h3>
                         <p class="timeline-company">eWorld Enterprise Solutions, Honolulu, HI | Dec 2023 – Oct 2025</p>
                         <ul>
-                            <li>Developed and maintained Hawai'i's statewide <strong>Public Assistance Information System (PAIS)</strong> – a full-stack benefits portal serving thousands of users</li>
-                            <li>Built SQL queries for data analysis, reporting, and system troubleshooting; optimized database performance for production workloads</li>
-                            <li>Performed extensive <strong>API testing and debugging</strong> using Postman; validated REST endpoints and system integrations</li>
-                            <li>Ensured IRS 1075 compliance for the <strong>Electronic Document Management System (EDM)</strong>; implemented security configurations and audit controls</li>
-                            <li>Authored technical documentation in JIRA/Confluence; provided hands-on technical support to field offices</li>
+                            <li>Supported development and maintenance of Hawai'i's statewide <strong>Public Assistance Information System (PAIS)</strong> – a high-volume benefits portal serving statewide users</li>
+                            <li>Built <strong>50+ SQL queries</strong> for data analysis, reporting, and system troubleshooting; optimized database performance for production workloads</li>
+                            <li>Performed extensive <strong>API testing and debugging</strong> using Postman; validated <strong>100+ REST endpoints</strong> and system integrations</li>
+                            <li>Ensured IRS 1075 compliance for the <strong>Electronic Document Management System (EDM)</strong>; contributed to security configurations and audit controls</li>
+                            <li>Authored <strong>200+ technical documents</strong> in JIRA/Confluence; provided hands-on technical support to field offices</li>
                             <li>Collaborated with IBM on Automation Document Processing (ADP) proof of concept; validated system requirements and integration points</li>
                         </ul>
                     </div>
@@ -175,8 +177,8 @@
                         <span class="project-tag">Full-Stack Development</span>
                     </div>
                     <p>
-                        Developed and maintained Hawai'i's statewide benefits portal serving thousands of users. 
-                        Built SQL queries for reporting and analytics, performed REST API testing, and implemented system enhancements for improved user experience and performance.
+                        Supported development and maintenance of Hawai'i's statewide benefits portal serving a large user population. 
+                        Built 50+ SQL queries for reporting and analytics, validated 100+ REST API endpoints, and contributed to system enhancements for improved user experience and performance.
                     </p>
                     <div class="project-tech">
                         <span>Full-Stack Development</span>
@@ -191,8 +193,8 @@
                         <span class="project-tag">Backend & Security</span>
                     </div>
                     <p>
-                        Built and configured a secure document management system ensuring IRS 1075 compliance for Federal Tax Information (FTI). 
-                        Performed API testing, implemented security controls, and conducted technical audits to meet federal standards.
+                        Supported configuration of a secure document management system ensuring IRS 1075 compliance for Federal Tax Information (FTI). 
+                        Performed API testing, contributed to security controls implementation, and supported technical audits to meet federal standards.
                     </p>
                     <div class="project-tech">
                         <span>Backend Development</span>
@@ -253,13 +255,13 @@
                             </svg>
                             hiptrav9@gmail.com
                         </a>
-                        <a href="https://linkedin.com/in/travis-hipolito" class="contact-link" target="_blank">
+                        <a href="https://linkedin.com/in/travis-hipolito" class="contact-link" target="_blank" rel="noopener noreferrer">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                             LinkedIn
                         </a>
-                        <a href="https://github.com/Travis-Code" class="contact-link" target="_blank">
+                        <a href="https://github.com/Travis-Code" class="contact-link" target="_blank" rel="noopener noreferrer">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -268,6 +270,7 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contact-form">
+                    <p class="form-note"><em>Note: Contact form is for demo purposes. Please reach out via email or LinkedIn above.</em></p>
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -277,6 +280,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

@@ -4,7 +4,8 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isExpanded = navMenu.classList.toggle('active');
+        mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
     });
 }
 
@@ -13,6 +14,9 @@ const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        if (mobileMenuToggle) {
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        }
     });
 });
 
