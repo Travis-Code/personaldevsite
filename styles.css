@@ -189,6 +189,18 @@ body {
     color: var(--text-dark);
 }
 
+/* Small disclaimer block */
+.disclaimer {
+    margin: -1rem auto 2rem;
+    max-width: 800px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
 /* About Section */
 .about-content {
     display: grid;
