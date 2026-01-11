@@ -717,6 +717,16 @@ a {
     gap: 1rem;
 }
 
+/* Honeypot field - hidden spam trap */
+.honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 .form-note {
     color: var(--text-light);
     font-size: 0.875rem;
