@@ -129,3 +129,27 @@ document.querySelectorAll('.section').forEach(section => {
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
 });
+
+// Typewriter effect for elements with class "typewriter"
+document.addEventListener('DOMContentLoaded', () => {
+    const typewriterEls = document.querySelectorAll('.typewriter');
+    typewriterEls.forEach(el => {
+        const text = el.getAttribute('data-text') || el.textContent.trim();
+        const speed = parseInt(el.getAttribute('data-speed') || '28', 10); // ms per character
+        const delay = parseInt(el.getAttribute('data-delay') || '300', 10); // initial delay
+
+        // Clear initial content before typing
+        el.textContent = '';
+
+        let i = 0;
+        const type = () => {
+            if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        };
+
+        setTimeout(type, delay);
+    });
+});

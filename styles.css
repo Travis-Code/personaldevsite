@@ -115,6 +115,20 @@ a {
     position: relative;
 }
 
+/* Typewriter caret blink */
+@keyframes typewriterCaretBlink {
+    0%, 49% { opacity: 0.85; }
+    50%, 100% { opacity: 0; }
+}
+
+.typewriter::after {
+    content: "▍";
+    display: inline-block;
+    margin-left: 0.1em;
+    color: var(--text-light);
+    animation: typewriterCaretBlink 1s step-end infinite;
+}
+
 .nav-menu a::after,
 .contact-link::after,
 .project-link::after {
